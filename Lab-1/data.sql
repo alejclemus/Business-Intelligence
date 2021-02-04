@@ -1,0 +1,21 @@
+CREATE TABLE `test.data` (
+	`index` BIGINT, 
+	vendor_id BIGINT, 
+	pickup_at DATETIME, 
+	dropoff_at DATETIME, 
+	passenger_count BIGINT, 
+	trip_distance FLOAT(23), 
+	rate_code_id BIGINT, 
+	store_and_fwd_flag TEXT, 
+	pickup_location_id BIGINT, 
+	dropoff_location_id BIGINT, 
+	payment_type BIGINT, 
+	fare_amount FLOAT(53), 
+	extra FLOAT(53), 
+	mta_tax FLOAT(53), 
+	tip_amount FLOAT(53), 
+	tolls_amount FLOAT(53), 
+	improvement_surcharge FLOAT(53), 
+	total_amount FLOAT(23), 
+	congestion_surcharge FLOAT(53)
+)

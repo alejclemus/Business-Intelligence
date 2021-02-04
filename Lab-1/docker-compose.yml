@@ -1,0 +1,27 @@
+version: '3.7'
+
+services:
+  db:
+    image: mysql:5.7
+    restart: always
+    environment:
+      MYSQL_DATABASE: test
+      MYSQL_USER: test
+      MYSQL_PASSWORD: test123
+      MYSQL_ROOT_PASSWORD: test123
+    ports:
+      # <Port exposed> : < MySQL Port running inside container>
+      - '3306:3306'
+    expose:
+      # Opens port 3306 on the container
+      - '3306'
+      # Where our data will be persisted
+    volumes:
+      - db_data:/var/lib/mysql
+  jupyter:
+    image: jupyter/base-notebook
+    ports:
+      - 8888:8888
+  
+volumes:
+  db_data:
